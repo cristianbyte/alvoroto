@@ -6,9 +6,12 @@
 }
 
 body{
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
+    overflow: hidden;
+    background-color: var(--black);
     justify-content: center;
     align-items: center;
 }
@@ -23,30 +26,40 @@ body{
     --white: #fff;
 }
 
-.revolcon{
+.revolcon__title{
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 20vw;
+    animation: flash steps(5) 1s infinite;
+    z-index: 100;
+}
+
+.container{
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--black);
     display: flex;
     justify-content: start;
+}
+
+.revolcon{
+    position: relative;
+    width: 100%;
+    height: min-content;
+    background-color: var(--black);
+    display: flex;
     flex-direction: row;
-    align-items: start;
     flex-wrap: wrap;
 }
 
-.revolcon__title{
-    text-transform: uppercase;
-    position: absolute;
-    font-size: 10em;
-    animation: flash steps(8) 1s infinite;
-}
 
 .revolcon__image{
-    aspect-ratio: 1/1;
-    width: 20%;
+    height: calc(100vh / 4);
+    width: calc(100vw / 5);
     background-position: center;
     background-size: cover;
-    background-image: url(./assets/cat.webp);
+    background-image: url(./assets/david.webp);
 }
 
 @keyframes flash {
@@ -57,4 +70,14 @@ body{
         opacity: 0;
     }
 
+}
+
+@keyframes gears {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+
+    100%{
+        transform: rotate(5turn) scale(.1);
+    }
 }
