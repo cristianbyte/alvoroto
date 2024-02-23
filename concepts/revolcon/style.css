@@ -1,3 +1,60 @@
 *{
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nevera;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: nevera;
+    src: url(./assets/nueraf.otf);
+}
+
+:root{
+    --black: #000;
+    --white: #fff;
+}
+
+.revolcon{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.revolcon__title{
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 10em;
+    animation: flash steps(8) 1s infinite;
+}
+
+.revolcon__image{
+    aspect-ratio: 1/1;
+    width: 20%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./assets/cat.webp);
+}
+
+@keyframes flash {
+    0%,40%,80%{
+        opacity: 1;
+    }
+    5%,35%,85%{
+        opacity: 0;
+    }
+
 }
