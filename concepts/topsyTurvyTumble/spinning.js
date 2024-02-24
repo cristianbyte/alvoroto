@@ -1,8 +1,10 @@
 //selectors
 const mainTopsy = document.querySelector(".topsyTurvy");
+const video = document.querySelector(".video");
 
 //events
 document.addEventListener("DOMContentLoaded", () => {
+  video.play();
   getImages();
 });
 
