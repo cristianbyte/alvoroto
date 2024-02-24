@@ -1,3 +1,105 @@
 *{
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nevera;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--black);
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: nevera;
+    src: url(./assets/nueraf.otf);
+}
+
+:root{
+    --black: #000;
+    --white: #fff;
+}
+
+.revolcon__title{
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 20vw;
+    animation: flash steps(5) 1s infinite;
+    z-index: 100;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.revolcon{
+    position: relative;
+    width: 100%;
+    height: min-content;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.revolcon__image{
+    height: calc(100vh / 4);
+    width: calc(100vw / 5);
+    background-position: center;
+    background-size: cover;
+    background-image: url(./assets/david.webp);
+}
+
+@keyframes flash {
+    0%,40%,80%{
+        opacity: 1;
+    }
+    5%,35%,85%{
+        opacity: 0;
+    }
+
+}
+
+@keyframes gears {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+
+    100%{
+        transform: rotate(4turn) scale(.1);
+    }
+}
+
+@keyframes squareMove {
+    0%,100%{
+        transform: translate(0%,0%);
+    }25%{
+        transform: translate(100%,0%);
+    }50%{
+        transform: translate(200%,100%);
+    }75%{
+        transform: translate(0%,200%);
+    }
+}
+
+@keyframes shake {
+    0%,70%{
+        transform: translate(.5rem,0);
+    }10%,40%,100%{
+        transform: translate(-.3rem,.3rem);
+    }20%,50%,80%{
+        transform: translate(.4rem,-.1rem);
+    }
 }
