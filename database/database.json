@@ -1,13 +1,14 @@
-[{
+[
+    {
     "name":"revolcon",
-    "url":"./concepts/revolcon/index.html"
-},
-{
+    "url":"../revolcon/index.html"
+    },
+    {
     "name":"abstraction",
-    "url":"./concepts/abstraction/index.html"
-},
-{
+    "url":"../abstraction/index.html"
+    },
+    {
     "name":"continuos estrangment",
-    "url":"./concepts/continuous estrangement/index.html"
-}
+    "url":"../continuous estrangement/index.html"
+    }
 ]
