@@ -1,0 +1,50 @@
+:root {
+  --beige: #f5eee6;
+  --yelowlithg: #fff8e3;
+  --caqui: #f3d7ca;
+  --pink: #e6a4b4;
+}
+
+@font-face {
+  font-family: candy;
+  src: url(./assets/Copyduck.otf);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: candy;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--beige);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.bolera-nav {
+  background-color: var(--caqui) !important;
+}
+
+.bolera-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.options{
+  position: absolute;
+  bottom: 150%;
+  right: 5%;
+}
+
+.bolera-foter{
+  background-color: var(--caqui);
+}
