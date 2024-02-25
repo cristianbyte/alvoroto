@@ -21,7 +21,7 @@ header{
     z-index: 6;
     top:50%;
     left: 0;
-    width: 30px;
+    width: 50px;
     height: 120px;
     background-color: red;
     cursor: pointer;
@@ -35,7 +35,7 @@ header{
 }
 
 .hide{
-    left: -30px;
+    left: -50px;
 }
 
 
@@ -44,15 +44,14 @@ header{
     background: url('./media/pergamino.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 30vw;
-    height: 50vh;
-    max-width: 205px;
-    max-height: 432px;
+    
+    width: 205px;
+    height: 432px;
     position: absolute;
     transition: all .5s linear;
     z-index: 5;
     top:30%;
-    left: -30vw;
+    left: -205px;
     filter: drop-shadow(0 0 0.90rem rgb(255, 255, 255));
     display: flex;
     align-items: center;
