@@ -1,18 +1,25 @@
 
 const body = document.querySelector('body')
+const header = document.querySelector('body > header')
+const audio = document.querySelector('audio')
+const aside =document.querySelector('.aside')
 
 
-console.dir(body)
+
 let size1 = 70
 let size2 = 30
 let size3 = 10
 let sizeChange = 5
 
-document.addEventListener('DOMContentLoaded', ()=>{
-
-    const audio = document.querySelector('audio')
-    console.log(audio)
-    audio.play()
+header.addEventListener('click', ()=>{
+    console.dir(audio)
+    header.classList.add('hide')
+    aside.classList.add('unhide')
+    if (audio.paused== true){
+        audio.play()
+    }else{
+        audio.pause()
+    }
 })
 
 function CreateSqare(nodo, ancho, color, index) {
@@ -73,3 +80,34 @@ function makeSquareSmaller(nodo, decremento) {
 setInterval(makeSquareSmaller, 30, cuadro1, 1)
 setInterval(makeSquareSmaller, 30, cuadro2, 1)
 setInterval(makeSquareSmaller, 30, cuadro3, 1)
+
+
+async function getConcepts(){
+    const response = await fetch('../../database/database.json')
+    const data = await response.json()
+    const listaConcepto = document.createElement('ul')
+    const closer = document.createElement('li')
+    const iconoCerrar = document.createElement('i')
+    iconoCerrar.classList.add('bx')
+    iconoCerrar.classList.add('bx-x')
+    iconoCerrar.classList.add('bx-tada')
+    aside.append(listaConcepto)
+    closer.appendChild(iconoCerrar)
+    
+    data.forEach(concepto => {
+        let item = document.createElement('li')
+        let nameAncla = document.createElement('a')
+        nameAncla.href=concepto.url
+        nameAncla.textContent=concepto.name
+        item.append(nameAncla)
+        listaConcepto.append(item)
+    });
+    listaConcepto.appendChild(closer)
+    iconoCerrar.addEventListener('click', ()=>{
+    header.classList.remove('hide')
+    aside.classList.remove('unhide')
+
+    })
+}
+
+getConcepts()

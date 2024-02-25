@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     width: 100vw;
     height: 100vh;
@@ -12,7 +18,63 @@ body{
 
 header{
     position: absolute;
-    z-index: 5;
-    top:0;
+    z-index: 6;
+    top:50%;
+    left: 0;
+    width: 30px;
+    height: 120px;
+    background-color: red;
+    cursor: pointer;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s linear
 }
 
+.hide{
+    left: -30px;
+}
+
+
+
+.aside{
+    background: url('./media/pergamino.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30vw;
+    height: 50vh;
+    max-width: 205px;
+    max-height: 432px;
+    position: absolute;
+    transition: all .5s linear;
+    z-index: 5;
+    top:30%;
+    left: -30vw;
+    filter: drop-shadow(0 0 0.90rem rgb(255, 255, 255));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.unhide{
+    left: 0;
+}
+
+ul{
+    width: 50%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+}
