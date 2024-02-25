@@ -5,17 +5,22 @@
 
 body{
     width: 100vw;
-    height: auto;
+    height: 100vh;
     background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .app{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 80%;
+    gap: 2rem;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
     iframe{
         max-width: 100%rem;
         max-height: auto;

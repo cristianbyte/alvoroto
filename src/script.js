@@ -8,13 +8,12 @@ async function loadPages(){
 
 (async () => {
     const pages = await loadPages();
-    for (const [key, value] of Object.entries(pages)) {
+    pages.forEach((page) => {
         const iframe = document.createElement('iframe')
-        iframe.src = value
-        iframe.addEventListener('click',()=>{
-            window.location.href = value;
-        })
+        iframe.src = page.url
         app.appendChild(iframe)
-        console.log(`${key}: ${value}`);
-    }
+        let name = page.name
+        let link = page.url
+        console.log(name,link);
+    })
 })();

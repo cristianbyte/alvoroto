@@ -1,18 +1,22 @@
 [
     {
-    "name":"revolcon",
-    "url":"../revolcon/index.html"
+        "name":"revolcon",
+        "url":"/concepts/revolcon/"
     },
     {
-    "name":"abstraction",
-    "url":"../abstracton/index.html"
+        "name":"abstraction",
+        "url":"/concepts/abstracton"
     },
     {
-    "name":"continuos estrangment",
-    "url":"../continuous estrangement/index.html"
+        "name":"continuos estrangment",
+        "url":"/concepts/continuous estrangement/"
     },
     {
-    "name":"spinning",
-    "url":"../spinning/spinning.html"
+        "name":"experimental concept",
+        "url":"/concepts/experimentalConcept/"
+    },
+    {
+        "name":"spinning",
+        "url":"/concepts/spinning/spinning.html"
     }
 ]
