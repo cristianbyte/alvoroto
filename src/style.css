@@ -22,10 +22,15 @@ body{
     flex-wrap: wrap;
     overflow: hidden;
     iframe{
-        max-width: 100%rem;
+        max-width: 100%;
         max-height: auto;
         overflow: hidden;
         cursor: pointer;
+        pointer-events: none;
+    }
+    .overlay{
+        position: relative;
+        z-index: 5;
     }
 }
 
