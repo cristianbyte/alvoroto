@@ -8,13 +8,16 @@ async function loadPages(){
 
 (async () => {
     const pages = await loadPages();
-    for (const [key, value] of Object.entries(pages)) {
+    pages.forEach((page) => {
+        const redirect = document.createElement('a')
         const iframe = document.createElement('iframe')
-        iframe.src = value
-        iframe.addEventListener('click',()=>{
-            window.location.href = value;
-        })
-        app.appendChild(iframe)
-        console.log(`${key}: ${value}`);
-    }
+        redirect.href = page.url
+        redirect.classList.add('overlay')
+        redirect.target = '_blanck'
+        iframe.src = page.url
+        redirect.appendChild(iframe)
+        app.appendChild(redirect)
+        let name = page.name
+        let link = page.url
+    })
 })();
