@@ -4,6 +4,25 @@ const revolcon = document.querySelector('.revolcon')
 const repeat = 21;
 const timing = 80;
 
+// START NAVBAR
+
+const navbar = document.getElementsByClassName('nav__revolcon')[0]
+
+async function loadNavbar(){
+    const data = await fetch('/database/database.json')
+    const response = await data.json()
+    response.forEach((page)=>{
+        console.log(page);
+        const link = document.createElement('a')
+        link.classList.add('nav__revolcon__item')
+        link.textContent = page.name
+        link.href = page.url
+        navbar.appendChild(link)
+    })
+}
+
+// END NAVBAR
+
 async function fillImage() {
     await new Promise(resolve => {
         for (let i = 1; i < repeat; i++) {
@@ -75,6 +94,7 @@ async function shakeRandon(){
 }
 
 document.addEventListener('DOMContentLoaded',async ()=>{
+    loadNavbar()
     await fillImage()
     await fillImageReverse()
     await animationGears();

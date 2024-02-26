@@ -26,6 +26,36 @@ body{
     --white: #fff;
 }
 
+.nav__revolcon{
+    padding: 1rem;
+    height: min-content;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    
+    .nav__revolcon__item{
+        width: 12rem;
+        padding: .5rem 0;
+        height: 100%;
+        text-decoration: none;
+        font-family: nevera;
+        color: var(--white);
+        text-shadow: 0 0 5rem 1rem var(--black);    
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1rem;
+        text-align: left;
+        transition: .3s ease;
+    }
+    .nav__revolcon__item:hover{
+        transform: translateX(1rem);
+    }
+}
+
 .revolcon__title{
     position: absolute;
     text-transform: uppercase;
