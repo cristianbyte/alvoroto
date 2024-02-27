@@ -48,3 +48,22 @@ body {
 .bolera-foter{
   background-color: var(--caqui);
 }
+
+.inputNumber{
+  width: 100%;
+  outline: none;
+  border: none;
+  
+  
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
