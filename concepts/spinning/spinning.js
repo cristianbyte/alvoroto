@@ -28,10 +28,11 @@ function animatedImages() {
 
 /**get images of the database */
 async function getImages() {
-  const url = `http://localhost:3000/images`;
+  const url = `../spinning/dbImages.json`;
   const response = await fetch(url);
   const data = await response.json();
-  const images = fillImages(data);
+  console.log(data.images);
+  const images = fillImages(data.images);
   const randomImages = reOrderImages(images);
   renderImages(randomImages);
 }
