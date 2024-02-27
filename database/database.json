@@ -18,5 +18,9 @@
     {
         "name":"spinning",
         "url":"/concepts/spinning/spinning.html"
+    },
+    {
+        "name":"game",
+        "url":"/concepts/arcade"
     }
 ]
