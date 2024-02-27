@@ -27,33 +27,37 @@ body{
 }
 
 .nav__revolcon{
+    position: relative;
     padding: 1rem;
     height: min-content;
-    width: 20rem;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    position: absolute;
     bottom: 0;
+    transition: all .2s ease;
     left: 0;
     z-index: 50;
     
-    .nav__revolcon__item{
-        width: 12rem;
-        padding: .5rem 0;
-        height: 100%;
-        text-decoration: none;
-        font-family: nevera;
-        color: var(--white);
-        text-shadow: 0 0 5rem 1rem var(--black);    
-        text-transform: uppercase;
-        font-weight: bolder;
-        font-size: 1rem;
-        text-align: left;
-        transition: .3s ease;
-    }
-    .nav__revolcon__item:hover{
-        transform: translateX(1rem);
-    }
+}
+.nav__revolcon__item{
+    transition: all 1s ease-out;
+    width: 100%;
+    padding: .5rem 0;
+    height: 100%;
+    text-decoration: none;
+    font-family: nevera;
+    color: var(--white);
+    text-shadow: 1rem 1rem 5rem 1rem var(--black);    
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: calc(1vw + 1vh);
+    text-align: left;
+    z-index: 50;
+}
+
+.nav__revolcon__item:hover{
+    transform: translateX(1rem);
 }
 
 .revolcon__title{
@@ -62,7 +66,7 @@ body{
     color: var(--white);
     font-size: 20vw;
     animation: flash steps(5) 1s infinite;
-    z-index: 100;
+    z-index: 10;
 }
 
 .container{
@@ -90,6 +94,18 @@ body{
     background-position: center;
     background-size: cover;
     background-image: url(./assets/david.webp);
+}
+
+@keyframes move {
+    0%,100%{
+        transform: translate(0%,0%);
+    }25%{
+        transform: translate(0%,90%);
+    }50%{
+        transform: translate(90%,90%);
+    }75%{
+        transform: translate(90%,0%);
+    }
 }
 
 @keyframes flash {
@@ -121,6 +137,9 @@ body{
         transform: translate(200%,100%);
     }75%{
         transform: translate(0%,200%);
+        background-image: url('./assets/jack.webp');
+    }100%{
+        background-image: url('./assets/jack.webp');
     }
 }
 
