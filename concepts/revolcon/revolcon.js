@@ -11,10 +11,12 @@ const navbar = document.getElementsByClassName('nav__revolcon')[0]
 async function loadNavbar(){
     const data = await fetch('/database/database.json')
     const response = await data.json()
-    response.forEach((page)=>{
-        console.log(page);
+    response.forEach((page,i)=>{
         const link = document.createElement('a')
         link.classList.add('nav__revolcon__item')
+        link.style.position = 'absolute'
+        console.log(i);
+        link.style.animation = `move 6s ${i+.5}s infinite`
         link.textContent = page.name
         link.href = page.url
         navbar.appendChild(link)
