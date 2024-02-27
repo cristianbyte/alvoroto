@@ -14,15 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function animatedImages() {
   const images = document.querySelectorAll(".imgToMove");
   images.forEach((image) => {
-    image.addEventListener("mouseover", () => {
+    
       image.classList.add("animate__animated");
-      image.classList.add("animate__rotateOut");
-    });
-
-    image.addEventListener("animationend", () => {
-      image.classList.remove("animate__animated");
-      image.classList.remove("animate__rotateOut");
-    });
+      image.classList.add("animate__flip");
+      image.classList.add("animate__infinite");
+      image.classList.add("infinite");
+    
   });
 }
 
