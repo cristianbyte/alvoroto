@@ -14,24 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
 function animatedImages() {
   const images = document.querySelectorAll(".imgToMove");
   images.forEach((image) => {
-    image.addEventListener("mouseover", () => {
+    
       image.classList.add("animate__animated");
-      image.classList.add("animate__rotateOut");
-    });
-
-    image.addEventListener("animationend", () => {
-      image.classList.remove("animate__animated");
-      image.classList.remove("animate__rotateOut");
-    });
+      image.classList.add("animate__flip");
+      image.classList.add("animate__infinite");
+      image.classList.add("infinite");
+    
   });
 }
 
 /**get images of the database */
 async function getImages() {
-  const url = `http://localhost:3000/images`;
+  const url = `../spinning/dbImages.json`;
   const response = await fetch(url);
   const data = await response.json();
-  const images = fillImages(data);
+  console.log(data.images);
+  const images = fillImages(data.images);
   const randomImages = reOrderImages(images);
   renderImages(randomImages);
 }
